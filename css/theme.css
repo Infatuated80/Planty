@@ -1,0 +1,349 @@
+/*
+Theme Name: Thème Planty
+Theme URI: https://oceanwp.org/
+Template: oceanwp
+Author: Brisse Frédéric
+Author URI: https://oceanwp.org/about-oceanwp/
+Description: Le thème Planty est l'enfant du thème parent oceanwp.
+Tags: planty, boisson, énergisante, boutique, Ecommerce
+Version: 1.1
+Updated: 2024-01-10 12:42:10
+*/
+
+/* Racine */
+
+:root {
+    --couleur-fond: #ffffff;
+    --couleur-texte: #000000;
+    --couleur-texte-survol: #FFFFFF;
+    --couleur-fond-survol: #DC9F96;
+    --couleur-mention-survol: #3b8e46;
+
+    /* Configuration de la variable pour la police de font */
+    --police: 'Syne', sans-serif;
+}
+
+/* Header */
+
+header {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+/* Navigation et logo */
+
+#nav-bar {
+    background-color: var(--couleur-fond);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    height: 80px;
+    margin: -15px 0 10px 5px;
+    padding: 0;
+}
+
+/* Gestion de l'apparence du logo */
+
+#logo {
+    margin: 15px 15px 15px 15px;
+    width: 200px;
+    height: 19px;
+}
+
+/* Gestion de l'apparence du menu */
+
+#menu {
+    margin: 0 0 0 0; 
+    padding: 0;
+}
+
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style:none;
+    margin:0; 
+    padding:0;
+    font-family: var(--police);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#menu li{       
+        list-style-type: none;
+        display: inline;
+        margin: 0 0 0 0;        
+    } 
+
+/* Permet de mettre admin au centre du menu */    
+#menu li:nth-child(2) { order: 1; }
+
+#menu a{
+        color: var(--couleur-texte);
+        text-decoration:none; 
+        margin: 0 0 0 0;
+        padding: 22px 22px 22px 22px;
+    } 
+    
+#menu a:hover {
+        text-decoration: none;
+        color: var(--couleur-texte-survol);
+        background-color: var(--couleur-fond-survol);
+        margin: 0 0 0 0;
+    }  
+    
+/* Pour avoir les arrondis en bas des containers */    
+
+
+.arrondi-bas {
+    border-radius: 0% 0% 30% 40% / 10% 10% 10% 10% !important; 
+}
+
+/* Pour centrer le container de l'équipe sur la largeur */
+
+.elementor-43 .elementor-element.elementor-element-38f1ca8 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Customisation du formulaire */
+
+/* Le bouton doit être centré */
+input.wpcf7-form-control.wpcf7-submit {
+    display: block;
+    margin: 0 auto;
+ }
+
+/* même si le lien a été visité, le bouton doit retrouver sa couleur d'origine */
+ input.wpcf7-form-control.wpcf7-submit:focus {
+    background-color: #E0B9B4;
+ }
+
+/* Lorsqu'on survol le bouton, il change de couleur pour faire comprendre à l'utilisateur qu'une action est possible */
+ input.wpcf7-form-control.wpcf7-submit:focus:hover {
+    background-color: #d13c25;
+ }
+
+ /* Gestion de l'apparence des messages retournés par le formulaire lorsqu'on valide. */
+ .wpcf7 form.sent .wpcf7 form.invalid  .wpcf7-response-output {
+    border-color: #326238;
+  }
+
+  .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    border-color: #326238;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    border-color: #326238;
+  }
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 65px;
+    background-color: var(--couleur-fond);
+    font-family: var(--police);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Gestion de l'apparence du lien renvoyant aux mentions légales. */
+
+#mentions {
+    text-align: center;
+    padding-top: 18px;
+}
+
+#mentions a{
+    color: var(--couleur-texte);
+    text-decoration:none; 
+    font-size: 16px;
+}
+
+#mentions a:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* Mise en place du formulaire de commande */
+
+.container_principal 
+{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+    color: var(--couleur-fond);
+}
+
+.container_principal h2
+{
+    color: var(--couleur-fond);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--police);
+    margin: 30px 0 20px 0;
+}
+
+.alignement_horizontal_form
+{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+/* L'alignement du container se fait à l'horizontal. Space-between permet de répartir équitablement l'espace entre les items tout en étant collé à la marge du container parent. */
+
+.alignement_horizontal 
+{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.alignement_verticale 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Gestion de l'apparence des vignettes de parfum propre à la page commander */
+
+.alignement_verticale_vignette 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.barre_verticale{
+    border-left: 1px solid var(--couleur-fond);
+    display: inline-block;
+    height: 350px;
+    margin: 30px 40px 0 40px;
+  }
+
+  /* Gestion de l'apparence du message qui s'affiche lorsqu'on envoi le formulaire */
+
+  .wpcf7 form.invalid .wpcf7-response-output{
+    color: black;
+    border-color: black;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    color: black;
+    border-color: black;
+  }
+
+  /*_________ Les media queries __________*/
+
+
+  /* Pour les mobiles et les tablettes dont la taille maxi atteint 700px de large.*/
+
+  @media screen and (min-width: 0px) and (max-width: 700px){
+
+    .alignement_horizontal_form
+{
+    flex-direction: column;
+    font-size: 13px;
+}
+
+/* on met 95 pour éviter que les vignettes se touchent. */
+
+.alignement_verticale_vignette img
+{
+max-width: 95%;
+}
+
+#nbre_fraise, #nbre_pamplemousse, #nbre_framboise, #nbre_citron {
+    max-width: 40px;
+    padding: 0 0 0 8px;
+}
+
+.alignement_verticale h2
+{    
+    font-size: 22px;
+}
+
+.barre_verticale{
+    border-left: 1px solid var(--couleur-fond);
+    display: block;
+    height: 0px;
+    max-width: 100%;
+    margin: 10px 0 0 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+  
+  img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  #logo {
+    margin: 15px 5px 15px 5px;
+    width: 100px;
+    height: auto;
+}
+
+#menu a{
+    color: var(--couleur-texte);
+    text-decoration:none; 
+    margin: 0 0 0 0;
+    padding: 10px 12px 10px 12px;
+} 
+
+#menu ul{
+    font-size: 12px;
+} 
+}
+
+/* Pour les tailles d'écran dont la taille maxi est de 380px de large. */
+
+@media screen and (min-width: 0px) and (max-width: 380px)
+{
+    #logo {
+        margin: 10px auto 10px auto;
+        width: 120px;
+        height: auto;
+    }
+
+    #nav-bar {
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 25px 5px;
+        padding: 0;
+    }
+}
+  
+
+
+
+

@@ -1,0 +1,23 @@
+/*
+Theme Name: Thème Planty
+Theme URI: https://oceanwp.org/
+Template: oceanwp
+Author: Brisse Frédéric
+Author URI: https://oceanwp.org/about-oceanwp/
+Description: Le thème Planty est l'enfant du thème parent oceanwp.
+Tags: planty, boisson, énergisante, boutique, Ecommerce
+Version: 1.1
+Updated: 2024-01-10 12:42:10
+
+*/
+
+.nav-bar {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    height: 80px;
+}
+
