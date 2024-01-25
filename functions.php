@@ -9,7 +9,8 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 /* si l'internaute est connecté à wordpress, on affiche admin dans le menu. Pour ce faire, on utilise un hook filter. Puisque la fonction 'wp_nav_menu_items' est native à WP, on filtre son comportement. 10 correspond à la valeur par défaut de $priority et 2
 correspond au nombre d'arguments acceptés. Cf. ($items, $args) */
 
-if (is_user_logged_in()) {
+if (is_user_logged_in()) 
+{
 add_filter('wp_nav_menu_items', 'ajout_element_menu', 10, 2);
 }
 
@@ -23,7 +24,8 @@ function theme_enqueue_styles()
 
 /* Cette fonction permet d'ajouter un nouvel élément à notre menu existant. Le lien renvoi à l'administration WP du site. */
 function ajout_element_menu($items, $args) {
-    $element= $items."<li><a href='/wp-admin/'>Admin</a></li>";
+    $admin = get_admin_url();
+    $element= $items."<li><a href='{$admin}'>Admin</a></li>";
     if($args->theme_location == 'Navigation')
     $element;
     return $element;
