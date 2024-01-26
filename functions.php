@@ -24,10 +24,12 @@ function theme_enqueue_styles()
 
 /* Cette fonction permet d'ajouter un nouvel élément à notre menu existant. Le lien renvoi à l'administration WP du site. */
 function ajout_element_menu($items, $args) {
+    $element = $items;
+    if ($args->theme_location == 'topbar_menu')
+    {
     $admin = get_admin_url();
     $element= $items."<li><a href='{$admin}'>Admin</a></li>";
-    if($args->theme_location == 'Navigation')
-    $element;
+    }
     return $element;
 }
 

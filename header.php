@@ -26,16 +26,14 @@
                 <img src="/wp-content/themes/theme-planty/img/logo_planty.svg" alt="Planty boisson énergisante !">
             </div>
 
-<!-- On affiche notre menu nommé Navigation avec wp_nav_menu. Il a été créé depuis l'administration WP 
+<!-- On affiche notre menu correspondant à la localisation cochée avec wp_nav_menu. Il a été créé depuis l'administration WP 
 Ce menu varie en fonction du hook wp_nav_menu_items créé dans function.php de notre thème enfant. Si l'internaute est connecté
 à WP, on ajoute un lien vers l'administration. -->
 
             <div id="menu" role="navigation">
 
                 <?php 
-              
-                wp_nav_menu("Navigation"); 
-
+                wp_nav_menu(array('theme_location' => 'topbar_menu'));             
                 ?>
 
             </div>
